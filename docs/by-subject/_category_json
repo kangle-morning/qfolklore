@@ -1,0 +1,8 @@
+{
+  "label": "By Subject",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "title": "By Subject"
+  }
+}
