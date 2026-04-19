@@ -32,7 +32,7 @@ export default function Home() {
             </p>
 
             <div className="hero-buttons">
-              <Link className="button button--primary button--lg" to="/docs/intro">
+              <Link className="button button--primary button--lg" to="/docs/about">
                 Start Browsing
               </Link>
               <Link className="button button--outline button--lg" to="/docs/open-problems/long-range-area-laws">

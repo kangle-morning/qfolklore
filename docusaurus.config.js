@@ -1,4 +1,6 @@
 // @ts-check
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -12,7 +14,7 @@ const config = {
   organizationName: 'kangle-morning',
   projectName: 'qfolklore',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn',
@@ -30,13 +32,15 @@ const config = {
     [
       'classic',
       {
-        docs: {
+         docs: {
           path: 'docs',
           routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/kangle-morning/qfolklore/tree/main/',
           showLastUpdateAuthor: false,
           showLastUpdateTime: true,
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: false,
         theme: {
@@ -44,6 +48,13 @@ const config = {
         },
       },
     ],
+  ],
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css',
+      type: 'text/css',
+    },
   ],
 
   plugins: [
@@ -76,8 +87,8 @@ const config = {
           label: 'Browse',
         },
         {
-          to: '/docs/intro',
-          label: 'Introduction',
+          to: '/docs/about',
+          label: 'About',
           position: 'left',
         },
         {
@@ -104,7 +115,7 @@ const config = {
         {
           title: 'Browse',
           items: [
-            { label: 'Introduction', to: '/docs/intro' },
+            { label: 'About', to: '/docs/about' },
             { label: 'Mermin–Wagner', to: '/docs/proved/mermin-wagner' },
             { label: 'Open Problems', to: '/docs/open-problems/long-range-area-laws' },
           ],

@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
-title: Introduction
+title: About
 ---
 
-# Introduction
+# About
 
 This site collects mathematically meaningful statements in quantum physics and statistical physics, organized by status:
 
