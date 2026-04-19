@@ -13,7 +13,12 @@ const config = {
   projectName: 'qfolklore',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
+
   trailingSlash: false,
 
   i18n: {
@@ -100,8 +105,8 @@ const config = {
           title: 'Browse',
           items: [
             { label: 'Introduction', to: '/docs/intro' },
-            { label: 'By Status', to: '/docs/category/by-status' },
-            { label: 'By Subject', to: '/docs/category/by-subject' },
+            { label: 'Mermin–Wagner', to: '/docs/proved/mermin-wagner' },
+            { label: 'Open Problems', to: '/docs/open-problems/long-range-area-laws' },
           ],
         },
         {
