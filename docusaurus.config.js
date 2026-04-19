@@ -6,17 +6,14 @@ const config = {
   tagline: 'A curated index of proved, conjectured, and disproved statements in quantum and statistical physics.',
   favicon: 'img/favicon.ico',
 
-  // Change these to your own GitHub info
   url: 'https://kangle-morning.github.io',
   baseUrl: '/qfolklore/',
 
-  organizationName: 'YOUR_GITHUB_USERNAME',
+  organizationName: 'kangle-morning',
   projectName: 'qfolklore',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // GitHub Pages usually works well with this default
   trailingSlash: false,
 
   i18n: {
@@ -58,82 +55,79 @@ const config = {
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      image: 'img/social-card.png',
-      navbar: {
-        title: 'Physics Wiki',
-        logo: {
-          alt: 'Physics Wiki Logo',
-          src: 'img/logo.svg',
+  themeConfig: {
+    image: 'img/social-card.png',
+    navbar: {
+      title: 'Physics Wiki',
+      logo: {
+        alt: 'Physics Wiki Logo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'mainSidebar',
+          position: 'left',
+          label: 'Browse',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'mainSidebar',
-            position: 'left',
-            label: 'Browse',
-          },
-          {
-            to: '/docs/intro',
-            label: 'Introduction',
-            position: 'left',
-          },
-          {
-            to: '/docs/open-problems/long-range-area-laws',
-            label: 'Open Problems',
-            position: 'left',
-          },
-          {
-            href: 'https://github.com/kangle-morning/qfolklore',
-            label: 'GitHub',
-            position: 'right',
-          },
-          // Replace this with your personal homepage link
-          {
-            href: 'https://kangle-morning.github.io/',
-            label: 'Homepage',
-            position: 'right',
-          },
-        ],
-      },
-
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Browse',
-            items: [
-              { label: 'Introduction', to: '/docs/intro' },
-              { label: 'By Status', to: '/docs/category/by-status' },
-              { label: 'By Subject', to: '/docs/category/by-subject' },
-            ],
-          },
-          {
-            title: 'Project',
-            items: [
-              { label: 'GitHub', href: 'https://github.com/kangle-morning/qfolklore' },
-              { label: 'Homepage', href: 'https://kangle-morning.github.io/' },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Mathematical Physics Statements Wiki.`,
-      },
-
-      colorMode: {
-        defaultMode: 'light',
-        disableSwitch: false,
-        respectPrefersColorScheme: true,
-      },
-
-      docs: {
-        sidebar: {
-          hideable: true,
-          autoCollapseCategories: false,
+        {
+          to: '/docs/intro',
+          label: 'Introduction',
+          position: 'left',
         },
+        {
+          to: '/docs/open-problems/long-range-area-laws',
+          label: 'Open Problems',
+          position: 'left',
+        },
+        {
+          href: 'https://github.com/kangle-morning/qfolklore',
+          label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://kangle-morning.github.io/',
+          label: 'Homepage',
+          position: 'right',
+        },
+      ],
+    },
+
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Browse',
+          items: [
+            { label: 'Introduction', to: '/docs/intro' },
+            { label: 'By Status', to: '/docs/category/by-status' },
+            { label: 'By Subject', to: '/docs/category/by-subject' },
+          ],
+        },
+        {
+          title: 'Project',
+          items: [
+            { label: 'GitHub', href: 'https://github.com/kangle-morning/qfolklore' },
+            { label: 'Homepage', href: 'https://kangle-morning.github.io/' },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Mathematical Physics Statements Wiki.`,
+    },
+
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: false,
       },
-    }),
+    },
+  },
 };
 
-export default config;
+module.exports = config;
